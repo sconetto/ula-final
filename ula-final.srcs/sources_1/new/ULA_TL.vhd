@@ -36,7 +36,7 @@ entity ULA_TL is
 end ULA_TL;
 
 architecture Behavioral of ULA_TL is
-component decoder_BCD
+component decoder_bcd
     port( entrada  : in  STD_LOGIC_VECTOR(3 downto 0);
           saida    : out STD_LOGIC_VECTOR(6 downto 0));
     end component;
