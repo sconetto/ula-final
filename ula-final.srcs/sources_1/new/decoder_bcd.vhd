@@ -33,13 +33,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity decoder_bcd is
 Port (
-      entrada  : in  std_logic_vector(3 downto 0);
+      dados    : in  std_logic_vector(3 downto 0);
       saida    : out std_logic_vector(0 to 6));
 end decoder_bcd;
 
 architecture Behavioral of decoder_bcd is
 begin
-    with entrada select
+    with dados select
         saida <= "0000001" when "0000",-- 0
 		         "1001111" when "0001",-- 1
 		         "0010010" when "0010",-- 2
