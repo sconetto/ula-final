@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Nov 22 21:42:30 2016
+# Process ID: 11808
+# Current directory: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9256 C:\Users\jscon\Desktop\sconetto\unb\ped\ula-final\ula-final.xpr
+# Log file: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/vivado.log
+# Journal file: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Output Repository Path: Could not find the directory 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.cache/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 708.422 ; gain = 104.543

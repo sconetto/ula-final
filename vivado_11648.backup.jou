@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Nov 22 14:26:55 2016
+# Process ID: 11648
+# Current directory: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4424 C:\Users\jscon\Desktop\sconetto\unb\ped\ula-final\ula-final.xpr
+# Log file: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/vivado.log
+# Journal file: C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.xpr
