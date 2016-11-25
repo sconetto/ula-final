@@ -18,8 +18,8 @@ architecture Behavioral of modo_calc is
     signal AXORB : STD_LOGIC_VECTOR(3 downto 0);
     signal NOTA  : STD_LOGIC_VECTOR(3 downto 0);
     signal COMP1 : STD_LOGIC_VECTOR(3 downto 0);
-    signal NUMA  : INTEGER RANGE 0 to 15 := 0;
-    signal NUMB  : INTEGER RANGE 0 to 15 := 0;
+    signal NUMA  : INTEGER RANGE 0 to 255 := 0;
+    signal NUMB  : INTEGER RANGE 0 to 255 := 0;
     signal RESULT : INTEGER RANGE 0 to 255 := 0;
     
 begin
@@ -75,6 +75,7 @@ begin
         elsif mode = "1101" then RESULT <= NUMA * NUMA;
         elsif mode = "1110" then RESULT <= NUMA * (-1);
         elsif mode = "1111" then RESULT <= NUMA + 1;
+        else value <= "ZZZZ";
         end if;
     end process;
     

@@ -1,37 +1,7 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 16.11.2016 12:36:34
--- Design Name: 
--- Module Name: ULA_TL - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity ULA_TL is
     port (  prog_calc  : in  STD_LOGIC;                    -- Se é modo calculador ou programação
@@ -56,6 +26,16 @@ component modo_calc
           value : out STD_LOGIC_VECTOR(7 downto 0));
 end component;
 
+component conversor
+    port( resultado_in :  in STD_LOGIC_VECTOR (7 downto 0);
+           modo         :  in STD_LOGIC_VECTOR (1 downto 0);
+           disp_und     : out STD_LOGIC_VECTOR (3 downto 0);
+           disp_dez     : out STD_LOGIC_VECTOR (3 downto 0);
+           disp_cen     : out STD_LOGIC_VECTOR (3 downto 0);
+           disp_mil     : out STD_LOGIC_VECTOR (3 downto 0);
+           led_bin      : out STD_LOGIC_VECTOR (7 downto 0));
+    end component;
+
     signal transfer : STD_LOGIC_VECTOR(3 downto 0);
     signal numero   : STD_LOGIC_VECTOR(7 downto 0);
     
@@ -63,5 +43,5 @@ begin
 
         anodes <= "0000";
         Decodificador : decoder_bcd port map(dados => numero, saida => display);
-        Resultado_modo : modo_calc port map(mode => modo_func, A0 => N0, A1 => N1, A2 => N2, A3 => N3, B0 => M0, B1 => M1, B2 => M2, B3 => M3, value => resultado);
+        Modo_calculadora : modo_calc port map(mode => modo_func, A0 => N0, A1 => N1, A2 => N2, A3 => N3, B0 => M0, B1 => M1, B2 => M2, B3 => M3, value => resultado);
 end Behavioral;
