@@ -4,7 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity ULA_TL is
-    port (  prog_calc  : in  STD_LOGIC;                    -- Se é modo calculador ou programação
+    port (  clk        : in STD_LOGIC;                     -- Clock para funcionamento do display
+            prog_calc  : in  STD_LOGIC;                    -- Se é modo calculador ou programação
             modo_func  : in  STD_LOGIC_VECTOR(3 downto 0); -- Qual operação será feita
             modo_dados : in STD_LOGIC_VECTOR(1 downto 0);  -- Qual o tipo de apresentação do dado HEX, OCT, BIN e DEC
             N0, M0, N1, M1, N2, M2, N3, M3 : in STD_LOGIC; -- 4 Bits dos operandos A e B
