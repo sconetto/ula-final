@@ -4,12 +4,12 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity driver_display is
-    Port (  clk         : in  STD_LOGIC;                        -- clock da placa (100mhz)
-            modo_a      : in  STD_LOGIC_VECTOR (1 downto 0);    -- apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
-            resultado   : in  STD_LOGIC_VECTOR (7 downto 0);    -- resultado das operações (8 bits)
+    Port (  clk         : in  STD_LOGIC;                        -- Clock da placa
+            modo_a      : in  STD_LOGIC_VECTOR (1 downto 0);    -- Apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
+            result      : in  STD_LOGIC_VECTOR (7 downto 0);    -- Resultado das operações (8 bits)
             disp_en     : out STD_LOGIC_VECTOR (3 downto 0);    -- controle enable displays (4 bits)
-            bar_7seg    : out STD_LOGIC_VECTOR (6 downto 0);   -- saida 7 bits BCD
-            saida       : out STD_LOGIC_VECTOR (7 downto 0);
+            bar_7seg    : out STD_LOGIC_VECTOR (6 downto 0);    -- Saída 7 bits BCD
+            saida       : out STD_LOGIC_VECTOR (7 downto 0); 
             bin         : out STD_LOGIC_VECTOR (7 downto 0));
             
 end driver_display;
@@ -17,18 +17,18 @@ end driver_display;
 architecture Behavioral of driver_display is
 
 component clock_divisor
-        Port ( clock_in  : IN STD_LOGIC;
-               clock_out : OUT STD_LOGIC);
+        Port ( clock_in  :  in STD_LOGIC;
+               clock_out : out STD_LOGIC);
 
 end component;
 component conversor
-        Port ( resultado_in :  in STD_LOGIC_VECTOR (7 downto 0);
-               modo         :  in STD_LOGIC_VECTOR (1 downto 0);   -- apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
-               disp_und     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display unidades
-               disp_dez     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display dezenas
-               disp_cen     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display centenas
-               disp_mil     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display 
-               led_bin      : out STD_LOGIC_VECTOR (7 downto 0));
+        Port ( resultado_in  :  in STD_LOGIC_VECTOR (7 downto 0);
+               modo          :  in STD_LOGIC_VECTOR (1 downto 0);   -- apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
+               disp_und      : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display unidades
+               disp_dez      : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display dezenas
+               disp_cen      : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display centenas
+               disp_mil      : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display 
+               led_bin       : out STD_LOGIC_VECTOR (7 downto 0));
 
 end component;
 
@@ -36,20 +36,21 @@ signal clk_disp    : STD_LOGIC;
 signal disp_1      : STD_LOGIC_VECTOR (3 downto 0);
 signal disp_2      : STD_LOGIC_VECTOR (3 downto 0);
 signal disp_3      : STD_LOGIC_VECTOR (3 downto 0);
-signal disp_4      : STD_LOGIC_VECTOR (3 downto 0); -- vazio
---signal bin         : STD_LOGIC_VECTOR (7 downto 0);
+signal disp_4      : STD_LOGIC_VECTOR (3 downto 0);
+
+signal bitvalue8  : STD_LOGIC_VECTOR (7 downto 0);
 
 signal count_sel   : STD_LOGIC_VECTOR (1 downto 0) := "00";
 signal bcd         : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 
-saida <= resultado;
+saida <= result;
 
 div_clock: clock_divisor port map ( clock_in  =>  clk,
-                                      clock_out =>  clk_disp);
+                                    clock_out =>  clk_disp);
 
-converter: conversor port map (  resultado_in  =>  resultado, 
+converter: conversor port map (  resultado_in  =>  result, 
                                  modo          =>  modo_a,
                                  disp_und      =>  disp_1,
                                  disp_dez      =>  disp_2,

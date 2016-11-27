@@ -1,0 +1,419 @@
+
+*** Running vivado
+    with args -log ULA_TL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ULA_TL.tcl
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source ULA_TL.tcl -notrace
+Command: synth_design -top ULA_TL -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9704 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 282.746 ; gain = 72.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ULA_TL' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:16]
+INFO: [Synth 8-3491] module 'modo_calc' declared at 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:6' bound to instance 'Modo_calculadora' of component 'modo_calc' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'modo_calc' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:13]
+WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'AORB' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'AANDB' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'AXORB' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'NOTA' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'NUMA' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+WARNING: [Synth 8-614] signal 'NUMB' is read in the process but is not in the sensitivity list [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'modo_calc' (1#1) [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:13]
+INFO: [Synth 8-3491] module 'driver_display' declared at 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/driver_display.vhd:6' bound to instance 'Driver' of component 'driver_display' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'driver_display' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/driver_display.vhd:17]
+INFO: [Synth 8-3491] module 'clock_divisor' declared at 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/clock_divisor.vhd:6' bound to instance 'div_clock' of component 'clock_divisor' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/driver_display.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'clock_divisor' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/clock_divisor.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clock_divisor' (2#1) [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/clock_divisor.vhd:11]
+INFO: [Synth 8-3491] module 'conversor' declared at 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:6' bound to instance 'converter' of component 'conversor' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/driver_display.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'conversor' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'conversor' (3#1) [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'driver_display' (4#1) [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/driver_display.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ULA_TL' (5#1) [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:16]
+WARNING: [Synth 8-3331] design ULA_TL has unconnected port prog_calc
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 319.301 ; gain = 109.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 319.301 ; gain = 109.289
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ULA_TL_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ULA_TL_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 619.211 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 619.211 ; gain = 409.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 619.211 ; gain = 409.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 619.211 ; gain = 409.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "tmp_clk_disp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "disp_cen" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "disp_dez" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "disp_und" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'RESULT_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'bitvalue_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'disp_und_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:84]
+WARNING: [Synth 8-327] inferring latch for variable 'disp_dez_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'disp_cen_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'disp_mil_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:53]
+WARNING: [Synth 8-327] inferring latch for variable 'led_bin_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:114]
+WARNING: [Synth 8-327] inferring latch for variable 'v_cont_reg' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/conversor.vhd:26]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 619.211 ; gain = 409.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 21    
+	   2 Input      5 Bit       Adders := 2     
+	   9 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 55    
+	   2 Input      4 Bit        Muxes := 7     
+	  12 Input      4 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 40    
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module modo_calc 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module clock_divisor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module conversor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 21    
+	   9 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 54    
+	   2 Input      4 Bit        Muxes := 6     
+	  12 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 37    
+Module driver_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "Driver/div_clock/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "Driver/div_clock/tmp_clk_disp" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "display0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3331] design ULA_TL has unconnected port prog_calc
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_15' (LD) to 'bitvalue_reg__0i_9'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_14' (LD) to 'bitvalue_reg__0i_9'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_13' (LD) to 'bitvalue_reg__0i_9'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_11' (LD) to 'bitvalue_reg__0i_9'
+INFO: [Synth 8-3886] merging instance 'Modo_calculadora/bitvalue_reg[4]' (LDCP) to 'Modo_calculadora/bitvalue_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_10' (LD) to 'bitvalue_reg__0i_9'
+INFO: [Synth 8-3886] merging instance 'Modo_calculadora/bitvalue_reg[5]' (LDCP) to 'Modo_calculadora/bitvalue_reg[6]'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_9' (LD) to 'bitvalue_reg__0i_12'
+INFO: [Synth 8-3886] merging instance 'Modo_calculadora/bitvalue_reg[6]' (LDCP) to 'Modo_calculadora/bitvalue_reg[7]'
+INFO: [Synth 8-3886] merging instance 'bitvalue_reg__0i_8' (LD) to 'bitvalue_reg__0i_12'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (bitvalue_reg__0i_12)
+INFO: [Synth 8-3886] merging instance 'Driver/converter/disp_mil_reg[0]' (LDC) to 'Driver/converter/disp_mil_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Driver/converter/disp_mil_reg[1]' (LDC) to 'Driver/converter/disp_mil_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Driver/converter/disp_mil_reg[2]' (LDC) to 'Driver/converter/disp_mil_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Driver/converter/disp_mil_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Driver/converter/disp_cen_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (bitvalue_reg__0i_12) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/disp_cen_reg[3]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/disp_mil_reg[3]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[7]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[6]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[5]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[4]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[3]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[2]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[1]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/led_bin_reg[0]) is unused and will be removed from module ULA_TL.
+INFO: [Synth 8-3886] merging instance 'Driver/converter/v_cont_reg[6]' (LD) to 'Driver/converter/v_cont_reg[5]'
+INFO: [Synth 8-3886] merging instance 'Driver/converter/v_cont_reg[5]' (LD) to 'Driver/converter/v_cont_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Driver/converter/v_cont_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Driver/converter/disp_cen_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/disp_cen_reg[2]) is unused and will be removed from module ULA_TL.
+WARNING: [Synth 8-3332] Sequential element (Driver/converter/v_cont_reg[4]) is unused and will be removed from module ULA_TL.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 619.211 ; gain = 409.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 621.871 ; gain = 411.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 634.445 ; gain = 424.434
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[7] with 1st driver pin 'i_235/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[7] with 2nd driver pin 'Modo_calculadora/RESULT_reg[7]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[6] with 1st driver pin 'i_234/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[6] with 2nd driver pin 'Modo_calculadora/RESULT_reg[6]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[5] with 1st driver pin 'i_233/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[5] with 2nd driver pin 'Modo_calculadora/RESULT_reg[5]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[4] with 1st driver pin 'i_232/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[4] with 2nd driver pin 'Modo_calculadora/RESULT_reg[4]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[3] with 1st driver pin 'i_231/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[3] with 2nd driver pin 'Modo_calculadora/RESULT_reg[3]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[2] with 1st driver pin 'i_230/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[2] with 2nd driver pin 'Modo_calculadora/RESULT_reg[2]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[1] with 1st driver pin 'i_229/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[1] with 2nd driver pin 'Modo_calculadora/RESULT_reg[1]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[0] with 1st driver pin 'i_228/O' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/ULA_TL.vhd:6]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net numero[0] with 2nd driver pin 'Modo_calculadora/RESULT_reg[0]/Q' [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.srcs/sources_1/new/modo_funcionamento.vhd:68]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    10|
+|3     |LUT1   |    41|
+|4     |LUT2   |    25|
+|5     |LUT3   |    17|
+|6     |LUT4   |    29|
+|7     |LUT5   |    35|
+|8     |LUT6   |    83|
+|9     |MUXF7  |     6|
+|10    |FDRE   |    35|
+|11    |LD     |    23|
+|12    |LDCP   |     5|
+|13    |IBUF   |    15|
+|14    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------+------+
+|      |Instance           |Module         |Cells |
++------+-------------------+---------------+------+
+|1     |top                |               |   337|
+|2     |  Driver           |driver_display |   176|
+|3     |    converter      |conversor      |    85|
+|4     |    div_clock      |clock_divisor  |    83|
+|5     |  Modo_calculadora |modo_calc      |   133|
++------+-------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 16 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 655.145 ; gain = 139.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 655.145 ; gain = 445.133
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 5 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 28 instances were transformed.
+  LD => LDCE: 23 instances
+  LDCP => LDCP (inverted pins: G) (GND, LUT3, LUT3, LDCE, VCC): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 31 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 655.145 ; gain = 445.133
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/ula-final.runs/synth_1/ULA_TL.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 655.145 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 27 14:20:31 2016...

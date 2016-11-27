@@ -7,21 +7,19 @@ entity modo_calc is
     Port ( mode  : in  STD_LOGIC_VECTOR(3 downto 0);
            A0, A1, A2, A3  : in  STD_LOGIC;
            B0, B1, B2, B3  : in STD_LOGIC;
-           value : out STD_LOGIC_VECTOR(7 downto 0));
+           bitvalue : out STD_LOGIC_VECTOR(7 downto 0));
 end modo_calc;
 
 architecture Behavioral of modo_calc is
-    signal A : STD_LOGIC_VECTOR(3 downto 0);
-    signal B : STD_LOGIC_VECTOR(3 downto 0);
-    signal AORB  : STD_LOGIC_VECTOR(3 downto 0);
-    signal AANDB : STD_LOGIC_VECTOR(3 downto 0);
-    signal AXORB : STD_LOGIC_VECTOR(3 downto 0);
-    signal NOTA  : STD_LOGIC_VECTOR(3 downto 0);
-    signal COMP1 : STD_LOGIC_VECTOR(3 downto 0);
-    signal NUMA  : INTEGER RANGE 0 to 255 := 0;
-    signal NUMB  : INTEGER RANGE 0 to 255 := 0;
-    signal RESULT : INTEGER RANGE 0 to 255 := 0;
-    
+    signal A : STD_LOGIC_VECTOR(3 downto 0);        -- Sinal para o Vetor A
+    signal B : STD_LOGIC_VECTOR(3 downto 0);        -- Sinal para o Vetor B
+    signal AORB   : STD_LOGIC_VECTOR(3 downto 0);   -- Sinal para a operação A or B bit a bit
+    signal AANDB  : STD_LOGIC_VECTOR(3 downto 0);   -- Sinal para a operação A and B bit a bit
+    signal AXORB  : STD_LOGIC_VECTOR(3 downto 0);   -- Sinal para a operação A xor B bit a bit
+    signal NOTA   : STD_LOGIC_VECTOR(3 downto 0);   -- Sinal para a operação not A
+    signal NUMA   : INTEGER RANGE 0 to 255 := 0;    -- Inteiro para o valor A
+    signal NUMB   : INTEGER RANGE 0 to 255 := 0;    -- Inteiro para o valor B
+    signal RESULT : INTEGER RANGE 0 to 255 := 0;    -- Inteiro para o resultado de operações entre A e B
 begin
 
    A(0) <= A0;
@@ -59,14 +57,14 @@ begin
    
    process(mode)
    begin
-        if mode = "0000" then value <= "0000";
-        elsif mode = "0001" then value <= "1111";
-        elsif mode = "0010" then value <= A;
-        elsif mode = "0011" then value <= B;
-        elsif mode = "0100" then value <= AORB;
-        elsif mode = "0101" then value <= AANDB;
-        elsif mode = "0110" then value <= AXORB;
-        elsif mode = "0111" then value <= NOTA;
+        if mode = "0000" then bitvalue <= "00000000";
+        elsif mode = "0001" then bitvalue <= "11111111";
+        elsif mode = "0010" then bitvalue <= "0000" & A;
+        elsif mode = "0011" then bitvalue <= "0000" & B;
+        elsif mode = "0100" then bitvalue <= "0000" & AORB;
+        elsif mode = "0101" then bitvalue <= "0000" & AANDB;
+        elsif mode = "0110" then bitvalue <= "0000" & AXORB;
+        elsif mode = "0111" then bitvalue <= "0000" & NOTA;
         elsif mode = "1000" then RESULT <= NUMA + NUMB;
         elsif mode = "1001" then RESULT <= NUMA - NUMB;
         elsif mode = "1010" then RESULT <= NUMA * NUMB;
@@ -75,11 +73,11 @@ begin
         elsif mode = "1101" then RESULT <= NUMA * NUMA;
         elsif mode = "1110" then RESULT <= NUMA * (-1);
         elsif mode = "1111" then RESULT <= NUMA + 1;
-        else value <= "ZZZZ";
+        else bitvalue <= "ZZZZZZZZ";
         end if;
     end process;
     
-    value <= STD_LOGIC_VECTOR(TO_UNSIGNED(RESULT, value'length));
+    bitvalue <= STD_LOGIC_VECTOR(TO_UNSIGNED(RESULT, bitvalue'length));
     
 
 end Behavioral;

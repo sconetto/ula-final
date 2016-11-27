@@ -4,12 +4,12 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity conversor is
-    Port ( resultado_in :  in STD_LOGIC_VECTOR (7 downto 0);
-           modo         :  in STD_LOGIC_VECTOR (1 downto 0);   -- apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
-           disp_und     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display unidades
-           disp_dez     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display dezenas
-           disp_cen     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display centenas
-           disp_mil     : out STD_LOGIC_VECTOR (3 downto 0);   -- digito BCD display 
+    Port ( resultado_in :  in STD_LOGIC_VECTOR (7 downto 0);   -- Dado de entrada com o resultado da operação da ULA
+           modo         :  in STD_LOGIC_VECTOR (1 downto 0);   -- Apresentação display -> '00' decimal - '01' Hexa - '10' binario - 11 octal
+           disp_und     : out STD_LOGIC_VECTOR (3 downto 0);   -- BCD display unidades
+           disp_dez     : out STD_LOGIC_VECTOR (3 downto 0);   -- BCD display dezenas
+           disp_cen     : out STD_LOGIC_VECTOR (3 downto 0);   -- BCD display centenas
+           disp_mil     : out STD_LOGIC_VECTOR (3 downto 0);   -- BCD display 
            led_bin      : out STD_LOGIC_VECTOR (7 downto 0));
 end conversor;
 
@@ -50,7 +50,7 @@ begin
              
              v_und := v_cont;
     
-                disp_mil   <=  (others => '0');
+                disp_mil   <=  "0000";  -- (others => '0');
       
              case v_cen is
                  when 0 => disp_cen <= "0000";   

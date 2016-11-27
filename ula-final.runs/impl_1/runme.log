@@ -1,0 +1,53 @@
+
+*** Running vivado
+    with args -log ULA_TL.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ULA_TL.tcl -notrace
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source ULA_TL.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/jscon/Desktop/sconetto/unb/ped/ula-final/Basys3_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LDCP => LDCP (inverted pins: G) (GND, LUT3, LUT3, LDCE, VCC): 5 instances
+
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 458.402 ; gain = 248.555
+INFO: [Vivado_Tcl 4-424] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[0] has multiple drivers: Modo_calculadora/disp_und_reg[0]_i_2/O, Modo_calculadora/RESULT_reg[0]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[1] has multiple drivers: Modo_calculadora/disp_und_reg[1]_i_2/O, Modo_calculadora/RESULT_reg[1]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[2] has multiple drivers: Modo_calculadora/disp_und_reg[2]_i_2/O, Modo_calculadora/RESULT_reg[2]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[3] has multiple drivers: Modo_calculadora/disp_und_reg[3]_i_3/O, Modo_calculadora/RESULT_reg[3]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[4] has multiple drivers: Modo_calculadora/disp_dez_reg[1]_i_3/O, Modo_calculadora/RESULT_reg[4]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[5] has multiple drivers: Modo_calculadora/disp_dez_reg[2]_i_4/O, Modo_calculadora/RESULT_reg[5]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[6] has multiple drivers: Modo_calculadora/disp_dez_reg[2]_i_3/O, Modo_calculadora/RESULT_reg[6]/Q.
+ERROR: [DRC 23-20] Rule violation (MDRV-1) Multiple Driver Nets - Net Modo_calculadora/Q[7] has multiple drivers: Modo_calculadora/disp_dez_reg[3]_i_2/O, Modo_calculadora/RESULT_reg[7]/Q.
+INFO: [Project 1-461] DRC finished with 8 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.591 . Memory (MB): peak = 465.918 ; gain = 7.516
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 0 Critical Warnings and 9 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 27 14:24:40 2016...
